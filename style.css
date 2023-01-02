@@ -12,7 +12,8 @@ body {
 /* style the header */
 .header {
     text-align: center;
-    background-color: #f44336;
+    background-color: #012b72;
+    /* background-color: #f44336; */
     color: white;
     padding: 0.5rem 0 1rem 0;
 }
@@ -21,20 +22,48 @@ body {
 input {
     width: 70%;
     font-size: 1rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: none;
+    margin:0;
 }
 
 /* style the "Add" button */
 .addBtn {
     width: 25%;
-    background-color: rgb(180, 173, 173);
     font-size: 1rem;
-    padding: 0.5rem;
-    margin-left:-0.25rem;
+    padding: 0.7rem;
+    margin: 0;
+    color: black;
+    background-color: #d9d9d9;
+    
 }
 .addBtn:hover {
-    background-color: rgb(133, 129, 129);
+    background-color: #bbb;
     cursor: pointer;
     transition: 0.2s;
+}
+
+/* remove margin and padding from the ul */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* style the list items */
+ul li{
+    font-size: 1.2rem;
+    background: #eee;
+    cursor: pointer;
+    padding: 1rem 1rem 1rem 5rem;
+}
+
+/* set all the odd items in the list to a different color */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* darker background color on hover */
+ul li:hover {
+    background: #ddd;
 }
