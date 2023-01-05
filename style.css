@@ -5,14 +5,22 @@
 
 /* setting body's margin, padding to 0 */
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
+    width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: auto;
+        padding: 0;
+        width: 90%;
+    }
 }
 
 /* style the header */
 .header {
     text-align: center;
-    background-color: #012b72;
     color: white;
     padding: 0.5rem 0 1rem 0;
     font-family: 'Trebuchet MS', sans-serif;
@@ -23,56 +31,27 @@ input {
     width: 70%;
     font-size: 1rem;
     padding: 0.7rem;
-    border: none;
     margin:0;
-    border-radius: 0.5rem;
+    border: 0.1rem solid #6C63FF;
+    /* border-radius: 0.5rem; */
     font-family: 'Courier New', monospace;
 }
 
 /* style the "Add" button */
-.addBtn {
+#addBtn {
     width: 25%;
     font-size: 1rem;
     padding: 0.7rem;
     margin: 0;
-    color: black;
-    background-color: #d9d9d9;
+    color: white;
+    background-color: #6C63FF;
     border-radius: 0.5rem;
+    border: 0.1rem solid #6C63FF;
 }
-.addBtn:hover {
-    background-color: #bbb;
+#addBtn:hover {
+    background-color: #4b44db;
     cursor: pointer;
     transition: 0.2s;
 }
 
-/* remove margin and padding from the ul */
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-/* style the list items */
-ul li{
-    font-size: 1.2rem;
-    background: #eee;
-    cursor: pointer;
-    padding: 1rem 1rem 1rem 5rem;
-    font-family: 'Courier New', monospace;
-}
-
-/* set all the odd items in the list to a different color */
-ul li:nth-child(odd) {
-    background: #f9f9f9;
-}
-
-/* darker background color on hover */
-ul li:hover {
-    background: #ddd;
-}
-
-ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-  }
