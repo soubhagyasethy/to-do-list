@@ -13,9 +13,9 @@ body {
 .header {
     text-align: center;
     background-color: #012b72;
-    /* background-color: #f44336; */
     color: white;
     padding: 0.5rem 0 1rem 0;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 /* style the input */
@@ -25,6 +25,8 @@ input {
     padding: 0.7rem;
     border: none;
     margin:0;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', monospace;
 }
 
 /* style the "Add" button */
@@ -35,7 +37,7 @@ input {
     margin: 0;
     color: black;
     background-color: #d9d9d9;
-    
+    border-radius: 0.5rem;
 }
 .addBtn:hover {
     background-color: #bbb;
@@ -56,6 +58,7 @@ ul li{
     background: #eee;
     cursor: pointer;
     padding: 1rem 1rem 1rem 5rem;
+    font-family: 'Courier New', monospace;
 }
 
 /* set all the odd items in the list to a different color */
@@ -67,3 +70,9 @@ ul li:nth-child(odd) {
 ul li:hover {
     background: #ddd;
 }
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
