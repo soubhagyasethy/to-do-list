@@ -3,7 +3,7 @@
     box-sizing: border-box;
   }
 
-/* setting body's margin, padding to 0 */
+/* style the body */
 body {
     margin: auto;
     padding: 0;
@@ -17,29 +17,44 @@ body {
         padding: 0;
         width: 90%;
     }
+
+    /* #toDo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1rem;
+        flex-direction: column;
+    } */
 }
 
 /* style the header */
-.header {
+header {
     text-align: center;
     color: #6C63FF;
     padding: 0.5rem 0 1rem 0;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/* style the mydiv */
+#myDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* style the input */
 input {
-    width: 70%;
+    width: 80%;
     font-size: 1rem;
     padding: 0.7rem;
-    margin:0;
+    margin: 0.5rem;
     border: 0.1rem solid #6C63FF;
     font-family: 'Courier New', monospace;
 }
 
 /* style the "Add" button */
 #addButton {
-    width: 25%;
+    width: 20%;
     font-size: 1rem;
     padding: 0.7rem;
     margin: 0;
@@ -48,39 +63,86 @@ input {
     border-radius: 0.5rem;
     border: 0.1rem solid #6C63FF;
 }
+
+/* hover on add button */
 #addButton:hover {
-    background-color: #4b44db;
+    background-color: white;
+    color: #6C63FF;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 
 /* style the toDo div */
-
 #toDo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
 }
+
+/* style the task-style div */
 .task-style {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-family: 'Courier New', monospace;
+    color: #6C63FF;
+    background-color: rgb(216, 213, 213);
+    cursor: pointer; 
+}
+
+/* style the edit button */
+.editButton-style {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: black;
+    background-color: rgb(216, 213, 213);
+    border: none;
+    cursor: pointer; 
+}
+
+/* style the delete button style */
+.deleteButton-style {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: black;
+    background-color: rgb(216, 213, 213);
+    border: none;
+    cursor: pointer; 
+}
+
+
+ /* .task-style {
     font-size: 1rem;
     padding: 0.5rem;
     margin: 0.5rem;
     font-family: 'Courier New', monospace;
     color: #6C63FF;
     background-color: rgb(216, 213, 213);
-    cursor: pointer;
-    text-align: left;
+    cursor: pointer; 
+    text-align: left; 
     overflow-wrap: break-word;
-}
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
 
-.deleteButton-style {
-    font-size: 1rem;
-    float:right;
-    cursor: pointer;
-    color: red;
-}
-
-.editButton-style {
+/* style the edit button */
+/* .editButton-style {
     font-size: 1rem;
     float:right;
     cursor: pointer;
     color: black;
-    margin: 0 0.5rem 1rem 0;
+    position: relative;
+    left: 70%;
 }
+
+/* style the delete button */
+/* .deleteButton-style {
+    font-size: 1rem;
+    float:right;
+    cursor: pointer;
+    color: red;
+    position: relative;
+    left: 80%;
+} */ 
