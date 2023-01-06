@@ -5,7 +5,10 @@ let toDo = document.querySelector("#toDo");
 addButton.addEventListener("click", () => {
     let input = myInput.value;
 
-    // creating toDo-style 
+    if (input === "") {
+        alert("Can't add empty task. Please write your task first!")
+    }else {
+        // creating toDoTask div 
     let toDoTask = document.createElement("div");
     toDoTask.classList.add("toDo-style");
     toDo.appendChild(toDoTask);
@@ -40,5 +43,7 @@ addButton.addEventListener("click", () => {
     task.addEventListener("click", () => {
         task.style.textDecoration = "line-through";
         })
+    }
+
 })
 
