@@ -5,10 +5,15 @@ let toDo = document.querySelector("#toDo");
 addButton.addEventListener("click", () => {
     let input = myInput.value;
 
+    // creating toDo-style 
+    let toDoTask = document.createElement("div");
+    toDoTask.classList.add("toDo-style");
+    toDo.appendChild(toDoTask);
+
     // creating task list
-    let task = document.createElement("div");
+    let task = document.createElement("li");
     task.classList.add("task-style");
-    toDo.appendChild(task);
+    toDoTask.appendChild(task);
     
     task.innerText = myInput.value;
     myInput.value = "";
@@ -16,20 +21,20 @@ addButton.addEventListener("click", () => {
     // creating a edit button
     let editButton = document.createElement("button");
     editButton.classList.add("editButton-style");
-    toDo.appendChild(editButton);
+    toDoTask.appendChild(editButton);
     editButton.innerText = "edit";
 
     // creating a delete button
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("deleteButton-style");
-    toDo.appendChild(deleteButton);
+    toDoTask.appendChild(deleteButton);
     deleteButton.innerText = "X";
 
     // delete the task
     deleteButton.addEventListener("click", () => {
-        toDo.removeChild(task);
-        toDo.removeChild(editButton);
-        toDo.removeChild(deleteButton);
+        toDoTask.removeChild(task);
+        toDoTask.removeChild(editButton);
+        toDoTask.removeChild(deleteButton);
     })
 
     task.addEventListener("click", () => {

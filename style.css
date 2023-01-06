@@ -49,6 +49,7 @@ input {
     padding: 0.7rem;
     margin: 0.5rem;
     border: 0.1rem solid #6C63FF;
+    border-radius: 0.5rem;
     font-family: 'Courier New', monospace;
 }
 
@@ -74,75 +75,58 @@ input {
 
 /* style the toDo div */
 #toDo {
+    display: block;
+    margin: auto;
+}
+
+/* style the todo style */
+.toDo-style {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     font-size: 1rem;
 }
 
 /* style the task-style div */
 .task-style {
+    width: 70%;
     padding: 0.5rem;
     margin: 0.5rem;
     font-family: 'Courier New', monospace;
     color: #6C63FF;
     background-color: rgb(216, 213, 213);
-    cursor: pointer; 
+    cursor: pointer;
+    word-wrap: break-word; 
 }
 
 /* style the edit button */
 .editButton-style {
+    width: 15%;
     padding: 0.5rem;
     margin: 0.5rem;
     color: black;
     background-color: rgb(216, 213, 213);
     border: none;
     cursor: pointer; 
+}
+
+.editButton-style:hover {
+    background-color: darkgray;
+    transition: 0.15s;
 }
 
 /* style the delete button style */
 .deleteButton-style {
+    width: 15%;
     padding: 0.5rem;
     margin: 0.5rem;
-    color: black;
+    color: red;
     background-color: rgb(216, 213, 213);
     border: none;
     cursor: pointer; 
 }
 
-
- /* .task-style {
-    font-size: 1rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    font-family: 'Courier New', monospace;
-    color: #6C63FF;
-    background-color: rgb(216, 213, 213);
-    cursor: pointer; 
-    text-align: left; 
-    overflow-wrap: break-word;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
-
-/* style the edit button */
-/* .editButton-style {
-    font-size: 1rem;
-    float:right;
-    cursor: pointer;
-    color: black;
-    position: relative;
-    left: 70%;
+.deleteButton-style:hover {
+    background-color: darkgray;
+    transition: 0.15s;
 }
-
-/* style the delete button */
-/* .deleteButton-style {
-    font-size: 1rem;
-    float:right;
-    cursor: pointer;
-    color: red;
-    position: relative;
-    left: 80%;
-} */ 
