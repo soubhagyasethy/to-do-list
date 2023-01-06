@@ -5,20 +5,33 @@ let toDo = document.querySelector("#toDo");
 addButton.addEventListener("click", () => {
     let input = myInput.value;
 
-    let paragraph = document.createElement("li");
-    toDo.appendChild(paragraph);
-    paragraph.classList.add("paragraph-style")
+    // creating task list
+    let task = document.createElement("p");
+    toDo.appendChild(task);
+    task.classList.add("task-style")
 
-    paragraph.innerText = myInput.value;
+    task.innerText = myInput.value;
     myInput.value = "";
 
-    paragraph.addEventListener("click", () => {
-    paragraph.style.textDecoration = "line-through";
-    paragraph.style.textDecorationColor = "red";
+    // creating a delete button
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("deleteButton-style");
+    task.appendChild(deleteButton);
+    deleteButton.innerText = "X";
+
+    // creating a edit button
+    let editButton = document.createElement("button");
+    editButton.classList.add("editButton-style");
+    task.appendChild(editButton);
+    editButton.innerText = "edit";
+
+    // delete the task
+    deleteButton.addEventListener("click", () => {
+        toDo.removeChild(task)
     })
 
-    paragraph.addEventListener("dblclick", () => {
-        paragraph.style.textDecoration = "none";
+    task.addEventListener("click", () => {
+        task.style.textDecoration = "line-through";
         })
 })
 
