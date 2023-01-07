@@ -46,7 +46,6 @@ addButton.addEventListener("click", () => {
 
         // edit the task
         editButton.addEventListener("click", () => {
-            // let editInput = document.querySelector(".task-style");
             editInput.contentEditable = true;
             editInput.style.backgroundColor = "white"
             editInput.style.border = "0.1rem solid grey";
@@ -56,7 +55,6 @@ addButton.addEventListener("click", () => {
 
         // update the task
         updateButton.addEventListener("click",() => {
-            // let editInput = document.querySelector(".task-style");
             editInput.contentEditable = false;
             editInput.style.backgroundColor = "rgb(216, 213, 213)"
             editInput.style.border = "none";
@@ -69,8 +67,8 @@ addButton.addEventListener("click", () => {
             toDoTask.removeChild(task);
             toDoTask.removeChild(editButton);
             toDoTask.removeChild(deleteButton);
+            toDoTask.removeChild(updateButton);
         })
 
     }
 });
-
