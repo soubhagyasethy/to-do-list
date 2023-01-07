@@ -5,7 +5,7 @@ let toDo = document.querySelector("#toDo");
 addButton.addEventListener("click", () => {
     let input = myInput.value;
 
-    if (input === "") {
+    if (!input) {
         alert("Can't add empty task. Please write your task first!")
     }else {
         // creating toDoTask div 
@@ -14,10 +14,10 @@ addButton.addEventListener("click", () => {
     toDo.appendChild(toDoTask);
 
     // creating task list
-    let task = document.createElement("li");
+    let task = document.createElement("div");
     task.classList.add("task-style");
     toDoTask.appendChild(task);
-    
+
     task.innerText = myInput.value;
     myInput.value = "";
 
@@ -32,6 +32,15 @@ addButton.addEventListener("click", () => {
     deleteButton.classList.add("deleteButton-style");
     toDoTask.appendChild(deleteButton);
     deleteButton.innerText = "X";
+
+    // edit the task
+    editButton.addEventListener("click", () => {
+        task.style.display = "none";
+        let edit_input = document.createElement("input");
+        edit_input.classList.add("edit-input-style");
+        toDoTask.appendChild(edit_input);
+        editButton.innerText = "save";
+    })
 
     // delete the task
     deleteButton.addEventListener("click", () => {

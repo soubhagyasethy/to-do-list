@@ -130,3 +130,7 @@ input {
     background-color: darkgray;
     transition: 0.15s;
 }
+
+.edit-input-style {
+    /* float: left; */
+}
