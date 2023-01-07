@@ -101,7 +101,7 @@ input {
 
 /* style the edit button */
 .editButton-style {
-    width: 15%;
+    width: 10%;
     padding: 0.5rem;
     margin: 0.5rem;
     color: black;
@@ -117,7 +117,7 @@ input {
 
 /* style the delete button style */
 .deleteButton-style {
-    width: 15%;
+    width: 10%;
     padding: 0.5rem;
     margin: 0.5rem;
     color: red;
@@ -131,6 +131,19 @@ input {
     transition: 0.15s;
 }
 
-.edit-input-style {
-    /* float: left; */
+/* update button style */
+.updateButton-style {
+    width: 10%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: red;
+    background-color: rgb(216, 213, 213);
+    border: none;
+    cursor: pointer; 
+    word-wrap: break-word;
+}
+
+.updateButton-style:hover {
+    background-color: darkgray;
+    transition: 0.15s;
 }
